@@ -8,6 +8,12 @@ website:
       - href: index.qmd
         text: Home
       - about.qmd
+      - href: research.qmd
+        text: Internships & Research
+      - href: photography.qmd
+        text: Film Photography
+      - href: publicity-stunt.qmd
+        text: Publicity Stunt
 
 format:
   html:
