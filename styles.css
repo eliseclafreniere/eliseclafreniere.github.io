@@ -1,1 +1,33 @@
-/* css styles */
+/* 1. The main dark green background of the navbar */
+.navbar, .navbar-default, .bg-light {
+  background-color: #2d4a36 !important; /* Your elegant dark green */
+}
+
+/* 2. Your main site title / brand name on the left */
+.navbar-brand, .navbar .navbar-brand {
+  color: #ffffff !important;
+}
+
+/* 3. The normal navigation links/tabs */
+.navbar-nav .nav-link, .navbar-nav a {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* 4. What happens when you hover your mouse over a tab */
+.navbar-nav .nav-link:hover, .navbar-nav a:hover {
+  color: #ffffff !important;
+  text-decoration: underline; /* Optional: adds a fine line on hover */
+}
+
+/* 5. The tab for the page you are currently viewing (Active State) */
+.navbar-nav .show > .nav-link, 
+.navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.active {
+  color: #ffffff !important;
+  font-weight: 500; /* Makes the active tab slightly crisper */
+}
+
+/* 6. Mobile fixes: ensure the three-line menu icon turns white on small screens */
+.navbar-toggler, .navbar-toggler-icon {
+  filter: invert(1) !important; 
+}

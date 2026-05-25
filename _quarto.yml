@@ -4,25 +4,27 @@ project:
 website:
   title: "Elise LaFreniere"
   navbar:
+    background: light      
+    foreground: dark
     left:
       - href: index.qmd
         text: Home
       - href: about.qmd
-        text: About Me
+        text: About
+      - href: projects.qmd
+        text: Projects
       - href: research.qmd
         text: Internships & Research
       - href: resume.qmd
         text: Resume
       - href: photography.qmd
         text: Film Photography
-      - href: publicity-stunt.qmd
-        text: Publicity Stunt
 
 format:
   html:
     theme:
-      - cosmo
-      - brand
+      - lux          # The minimalist layout skeleton
+      - custom.scss  # Your sage green color overrides
     css: styles.css
     toc: true
 
