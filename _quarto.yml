@@ -2,7 +2,9 @@ project:
   type: website
   output-dir: docs
 website:
-  title: "eliseclafreniere.github.io"
+  title: "Elise LaFreniere"
+  background: primary
+    search: false
   navbar:
     left:
       - href: index.qmd
