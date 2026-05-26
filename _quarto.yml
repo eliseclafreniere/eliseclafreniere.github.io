@@ -7,9 +7,9 @@ website:
     background: light      
     foreground: dark
     left:
-      - href: index.qmd
+      - href: index.html
         text: Home
-      - href: about.qmd
+      - href: about.html
         text: About
       - href: projects.html
         text: Projects
