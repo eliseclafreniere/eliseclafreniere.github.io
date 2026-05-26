@@ -11,13 +11,13 @@ website:
         text: Home
       - href: about.qmd
         text: About
-      - href: projects.qmd
+      - href: projects.html
         text: Projects
-      - href: research.qmd
+      - href: research.html
         text: Internships & Research
-      - href: resume.qmd
+      - href: resume.html
         text: Resume
-      - href: photography.qmd
+      - href: photography.html
         text: Film Photography
 
 format:
