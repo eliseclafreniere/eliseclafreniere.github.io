@@ -18,20 +18,34 @@
     "href": "about.html#climbing",
     "title": "About Me",
     "section": "Climbing",
-    "text": "Climbing\nI joined the UCSB climbing team this fall and have since then been on trips to Bishop, Red Rocks, and Joshua Tree. I boulder and my highest gym grade completed is a V5, my highest outdoor grade a V2."
+    "text": "Climbing\nI joined the UCSB climbing team this fall and have since then been on trips to Bishop, Red Rocks, and Joshua Tree. I primarily boulder and the highest gym grade I have completed is a V5, my highest outdoor grade a V2."
   },
   {
     "objectID": "about.html#publicity-stunt",
     "href": "about.html#publicity-stunt",
     "title": "About Me",
     "section": "Publicity Stunt",
-    "text": "Publicity Stunt\nThis fall I started a band named Publicity Stunt with my friends. We play covers in Isla Vista and are currently working on an EP. I sing and play rhythm guitar and write lyrics for the band.\n  @publi.citystunt"
+    "text": "Publicity Stunt\nThis fall I started a band named Publicity Stunt with my friends. We play indie rock covers in Isla Vista and are currently working on an EP. I sing and play rhythm guitar and write lyrics for the band.\n  @publi.citystunt"
+  },
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Internships & Research",
+    "section": "",
+    "text": "Winter quarter 2026 I interned with the Cheadle Center of Biodiversity and Ecological Restoration to take a total of 16 soil cores across a control and test site at North Campus Open Space. Each soil core was weighed and the salinity was measured to see how the salinity level has changed from when the site was originally restored to now.\n\nMy data put into visualization by my research coordinator, Francis Joyce\n\n\n\nSpring quarter 2026 I interned with the Cheadle Center of Biodiversity and Ecological Restoration to help plan and begin a greenhouse experiment. The purpose of this experiment is to test Stipa pulchra survivorship in response to varying salinity levels. This experiment is being done to investigate a hypothesis looking at why Stipa pulchra has seen die off at the North Campus Open Space restoration site in recent years. The experimental design includes 4 salinity treatments and wet versus dry treatments for 80 individual plants. This experiment is currently ongoing.\n\nWet treatment shown in blue coloring, dry in yellow. Individual observations shown in points with box plots displaying the median and IQR for each salinity treatment. Visualization of preliminary data I created utilizing R-studio."
+  },
+  {
+    "objectID": "research.html#internships-research",
+    "href": "research.html#internships-research",
+    "title": "Internships & Research",
+    "section": "",
+    "text": "Winter quarter 2026 I interned with the Cheadle Center of Biodiversity and Ecological Restoration to take a total of 16 soil cores across a control and test site at North Campus Open Space. Each soil core was weighed and the salinity was measured to see how the salinity level has changed from when the site was originally restored to now.\n\nMy data put into visualization by my research coordinator, Francis Joyce\n\n\n\nSpring quarter 2026 I interned with the Cheadle Center of Biodiversity and Ecological Restoration to help plan and begin a greenhouse experiment. The purpose of this experiment is to test Stipa pulchra survivorship in response to varying salinity levels. This experiment is being done to investigate a hypothesis looking at why Stipa pulchra has seen die off at the North Campus Open Space restoration site in recent years. The experimental design includes 4 salinity treatments and wet versus dry treatments for 80 individual plants. This experiment is currently ongoing.\n\nWet treatment shown in blue coloring, dry in yellow. Individual observations shown in points with box plots displaying the median and IQR for each salinity treatment. Visualization of preliminary data I created utilizing R-studio."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Elise LaFreniere",
     "section": "",
-    "text": "Bio\nHello! My name is Elise LaFreniere. Welcome to my website! I am an undergraduate student at the University of California, Santa Barbara (UCSB) studying Environmental Studies.\nMy career interests focus on buisness consulting, climate change, conservation, and reseearch around intertidal ecology.\n\n\nEducation\nUniversity of California, Santa Barbara | Santa Barbara, CA\nB.S. in Environmental Studies (In Progress)\n\n\nExperience\nCheadle Center for Biodiversity and Ecological Restoration | Research Intern from January 2026 - present\nCALPIRG Students | Campus Board Member & Save the Bees Campaign Coordinator January 2025 - December 2025"
+    "text": "Bio\nHello! My name is Elise LaFreniere. I am an undergraduate student at the University of California, Santa Barbara (UCSB) studying Environmental Studies.\nMy career interests focus on business consulting, climate change, conservation, and research around intertidal ecology.\n\n\nEducation\nUniversity of California, Santa Barbara | Santa Barbara, CA\nB.S. in Environmental Studies (In Progress)\n\n\nExperience\nCheadle Center for Biodiversity and Ecological Restoration | Research Intern January 2026 - present\nCALPIRG Students | Campus Board Member & Save the Bees Campaign Coordinator January 2025 - December 2025\n\n\nEmployment\nMakenna Koffee Isla Vista | Team Lead & Barista February 2026 - present"
   }
 ]

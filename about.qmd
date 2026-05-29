@@ -1,8 +1,5 @@
 ---
 title: "About Me"
-toc: false
-about:
-  template: solana
 ---
 ## My Background
 
