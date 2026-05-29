@@ -116,26 +116,28 @@ h2 {
     margin: 0 auto 1.5rem auto !important;
 }
 /* ==========================================================================
-   6. Clean About Page Alignment
+   6. About Page Layout Fixes
    ========================================================================== */
 
-/* 1. Keeps your name beautifully unbroken on a single line */
+/* Keeps your name beautifully unbroken on a single line */
 .quarto-about-trestles .about-entity h1, 
 .quarto-about-trestles .about-title {
     white-space: nowrap !important;
     font-size: 2.2rem !important;
+    text-align: left !important; /* Aligns your name cleanly to the left edge */
 }
 
-/* 2. Controls the spacing of the left column items globally */
+/* Shifts the image and name panel UP and to the LEFT */
 .quarto-about-trestles .about-entity {
-    text-align: center !important;
-    padding-top: 4rem !important; /* Pushes the entire left panel down to match the text baseline */
+    padding-top: 1.5rem !important;  /* Decreasing this moves the image UP toward the navbar */
+    padding-right: 4rem !important; /* Pushes the image content away from the center dividing line and over to the LEFT */
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important; /* Aligns the image to the left edge of its column */
 }
 
-/* 3. Adds a gentle margin shift to center the layout visually on the screen */
-.quarto-about-trestles .about-links {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 1rem;
+/* Aligns the round photo to the left edge instead of the center */
+.quarto-about-trestles .about-image {
+    margin-left: 0 !important; /* Removes the centering margin to let it sit left */
+    margin-right: auto !important;
 }
