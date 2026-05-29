@@ -2,15 +2,36 @@
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "About Me",
     "section": "",
-    "text": "About this site"
+    "text": "I was born in Oregon and have since lived in Kansas, Arizona, and California. I grew up alongside my brother, Cameron, who is now a professional tattoo artist in Oregon. My family loves amusement parks, playing games, and going to cafés.\n  \nI have two pets at home, a cat named Phoebe and dog named Nova. My childhood dog, Bono, recently passed away and is very missed and loved."
+  },
+  {
+    "objectID": "about.html#my-background",
+    "href": "about.html#my-background",
+    "title": "About Me",
+    "section": "",
+    "text": "I was born in Oregon and have since lived in Kansas, Arizona, and California. I grew up alongside my brother, Cameron, who is now a professional tattoo artist in Oregon. My family loves amusement parks, playing games, and going to cafés.\n  \nI have two pets at home, a cat named Phoebe and dog named Nova. My childhood dog, Bono, recently passed away and is very missed and loved."
+  },
+  {
+    "objectID": "about.html#climbing",
+    "href": "about.html#climbing",
+    "title": "About Me",
+    "section": "Climbing",
+    "text": "Climbing\nI joined the UCSB climbing team this fall and have since then been on trips to Bishop, Red Rocks, and Joshua Tree. I boulder and my highest gym grade completed is a V5, my highest outdoor grade a V2."
+  },
+  {
+    "objectID": "about.html#publicity-stunt",
+    "href": "about.html#publicity-stunt",
+    "title": "About Me",
+    "section": "Publicity Stunt",
+    "text": "Publicity Stunt\nThis fall I started a band named Publicity Stunt with my friends. We play covers in Isla Vista and are currently working on an EP. I sing and play rhythm guitar and write lyrics for the band.\n  @publi.citystunt"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Elise LaFreniere",
     "section": "",
-    "text": "Bio\nHello! My name is Elise LaFreniere. Welcome to my website! I am an undergraduate student at the University of California, Santa Barbara (UCSB) studying Environmental Studies.\nMy career interests focus on buisness consulting, climate change, conservation, and reseearch around intertidal ecology.\n\n\nEducation\nUniversity of California, Santa Barbara | Santa Barbara, CA\nB.S. in Environmental Studies (In Progress)\n\n\nExperience\nCheadle Center for Biodiversity and Ecological Restoration | Research Intern Winter 2025 - Spring 2026\nCALPIRG Students | Campus Board Member & Save the Bees Campaign Coordinator Winter 2024 - Fall 2025"
+    "text": "Bio\nHello! My name is Elise LaFreniere. Welcome to my website! I am an undergraduate student at the University of California, Santa Barbara (UCSB) studying Environmental Studies.\nMy career interests focus on buisness consulting, climate change, conservation, and reseearch around intertidal ecology.\n\n\nEducation\nUniversity of California, Santa Barbara | Santa Barbara, CA\nB.S. in Environmental Studies (In Progress)\n\n\nExperience\nCheadle Center for Biodiversity and Ecological Restoration | Research Intern from January 2026 - present\nCALPIRG Students | Campus Board Member & Save the Bees Campaign Coordinator January 2025 - December 2025"
   }
 ]
