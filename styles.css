@@ -115,3 +115,27 @@ h2 {
 .quarto-about-trestles .about-image {
     margin: 0 auto 1.5rem auto !important;
 }
+/* ==========================================================================
+   6. Clean About Page Alignment
+   ========================================================================== */
+
+/* 1. Keeps your name beautifully unbroken on a single line */
+.quarto-about-trestles .about-entity h1, 
+.quarto-about-trestles .about-title {
+    white-space: nowrap !important;
+    font-size: 2.2rem !important;
+}
+
+/* 2. Controls the spacing of the left column items globally */
+.quarto-about-trestles .about-entity {
+    text-align: center !important;
+    padding-top: 4rem !important; /* Pushes the entire left panel down to match the text baseline */
+}
+
+/* 3. Adds a gentle margin shift to center the layout visually on the screen */
+.quarto-about-trestles .about-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 1rem;
+}

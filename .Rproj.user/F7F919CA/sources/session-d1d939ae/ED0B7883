@@ -3,7 +3,7 @@
     "path": "~/Desktop/ENVS 193DS/eliseclafreniere.github.io/styles.css",
     "project_path": "styles.css",
     "type": "css",
-    "hash": "3419709833",
+    "hash": "0",
     "contents": "",
     "dirty": false,
     "created": 1780029410095.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "116,1",
-        "scrollLine": "95"
+        "cursorPosition": "2,4",
+        "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1780032340,
+    "lastKnownWriteTime": 1780032591,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1780032340251,
+    "last_content_update": 1780032591035,
     "read_only": false,
     "read_only_alternatives": []
 }
