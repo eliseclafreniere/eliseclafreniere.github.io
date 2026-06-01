@@ -10,8 +10,6 @@ website:
         text: Home
       - href: about.html
         text: About
-      - href: projects.html
-        text: Projects
       - href: research.html
         text: Internships & Research
       - href: resume.pdf

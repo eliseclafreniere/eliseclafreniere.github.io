@@ -1,6 +1,66 @@
 ---
 title: "photography"
-format: html
+format: 
+  html:
+    lightbox: true
 ---
 
-## my photography
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+# loading in packages
+library(leaflet)
+library(tidyverse)
+
+# creating object gps to store photo data 
+gps <- read_csv("data/photo_gps_updated.csv")
+
+# creating gps grouped data
+gps_grouped <- gps |> 
+  group_by(location, latitude, longitude) |> 
+  summarize(
+    # creating thumbnails 
+    popup_content = paste0(
+      '<div style="max-width: 280px; text-align: center;">',
+        '<h4 style="margin: 0 0 10px 0; font-family: inherit; font-size: 14px;">', unique(location), '</h4>',
+        '<div style="display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;">',
+          paste0(
+            '<a href="images/', filename, '" class="lightbox" data-gallery="map-gallery" title="', desc, '">',
+              '<img src="images/', filename, '" style="width: 80px; height: 80px; object-fit: cover; border-radius: 4px; cursor: pointer;"/>',
+            '</a>',
+            collapse = ""
+          ),
+        '</div>',
+      '</div>'
+    ),
+    .groups = "drop"
+  )
+
+# generate the interactive map layout
+site_map <- leaflet(data = gps_grouped) |>  
+  
+  # Add base map layers
+  addProviderTiles(providers$Esri.WorldImagery, group = "ESRI World Imagery") |>  
+  addProviderTiles(providers$Esri.OceanBasemap, group = "ESRI Oceans") |> 
+  
+  # add mini map
+  addMiniMap(toggleDisplay = TRUE, minimized = TRUE) |> 
+  
+  # Center map at Isla Vista area
+  setView(lng = -119.83, lat = 34.44, zoom = 10) |> 
+  
+# add location bubbles and markers 
+  addMarkers(clusterOptions = markerClusterOptions(),
+             lng = ~longitude, lat = ~latitude,
+             popup = ~popup_content) |> 
+
+  # add layers control 
+  addLayersControl(
+    baseGroups = c("ESRI World Imagery", "ESRI Oceans"))
+
+# print map 
+site_map
+```
+
