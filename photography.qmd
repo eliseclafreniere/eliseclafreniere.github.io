@@ -64,3 +64,11 @@ site_map <- leaflet(data = gps_grouped) |>
 site_map
 ```
 
+<div style="display: none;">
+![](images/surf.png)
+![](images/avery_double.png)
+![](images/elise_double.png)
+![](images/capri.jpg)
+![](images/ryder.png)
+![](images/sf.png)
+</div>
