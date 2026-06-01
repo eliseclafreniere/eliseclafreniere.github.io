@@ -27,8 +27,8 @@ gps_grouped <- gps |>
         '<h4 style="margin: 0 0 10px 0; font-family: inherit; font-size: 14px;">', unique(location), '</h4>',
         '<div style="display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;">',
           paste0(
-            '<a href="images/', filename, '" class="lightbox" data-gallery="map-gallery" title="', desc, '">',
-              '<img src="images/', filename, '" style="width: 80px; height: 80px; object-fit: cover; border-radius: 4px; cursor: pointer;"/>',
+          '<a href="/images/', filename, '" class="lightbox" data-gallery="map-gallery" title="', desc, '">',
+              '<img src="/images/', filename, '" style="width: 80px; height: 80px; object-fit: cover; border-radius: 4px; cursor: pointer;"/>',
             '</a>',
             collapse = ""
           ),
