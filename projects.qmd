@@ -1,0 +1,18 @@
+---
+title: "Projects"
+format: 
+  html:
+    lightbox: true
+listing:
+  contents: "projects/stipa_pulchra.qmd"
+  type: grid
+  categories: true
+  sort: 
+    - "date desc"
+---
+
+
+
+
+
+

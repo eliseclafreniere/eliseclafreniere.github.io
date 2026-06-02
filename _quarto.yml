@@ -10,9 +10,9 @@ website:
         text: Home
       - href: about.html
         text: About
-      - href: research.html
-        text: Internships & Research
-      - href: resume.pdf
+      - href: projects.html
+        text: Projects
+      - href: resume.html
         text: Resume
       - href: photography.html
         text: Film Photography
