@@ -9,6 +9,7 @@ listing:
   categories: true
   sort: 
     - "date desc"
+toc: false
 ---
 
 
