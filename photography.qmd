@@ -9,7 +9,7 @@ format:
 
 I first started film photography when I was 15 years old on a point and shoot my parents got me for Christmas. I love capturing the world, my friends, and even myself through the lens of a camera. Featured in this map are photos taken on my Canon AE-1 on 35mm Kodak gold film. 
 
-Displayed is an interactive map showing locations where I have taken my photos. The map centers around Isla Vista but includes photos from throughout Santa Barbara, Catalina Island, the bay, and New York. 
+Displayed is an interactive map showing locations where I have taken my photos. The map centers around Isla Vista but includes photos from Santa Barbara, Catalina Island, the bay, and New York. 
 
 ```{r}
 #| echo: true
