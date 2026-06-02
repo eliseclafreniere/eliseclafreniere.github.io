@@ -1,6 +1,9 @@
 ---
-title: "stipa_pulchra"
+title: "Greenhouse Experiment"
+description: "Beginning visualizations I created for an internship with the Cheadle Center"
+image: stipa.jpg
 format: html
+toc: false
 date: "2026-05-25"
 ---
 

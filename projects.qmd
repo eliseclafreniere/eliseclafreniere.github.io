@@ -4,7 +4,7 @@ format:
   html:
     lightbox: true
 listing:
-  contents: "projects/stipa_pulchra.qmd"
+  contents: "projects"
   type: grid
   categories: true
   sort: 
