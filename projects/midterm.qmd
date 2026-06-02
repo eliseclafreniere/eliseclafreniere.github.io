@@ -9,7 +9,7 @@ format: html
 
 ## Directions
 
-The directions for this assignment can be found on the ENVS 193DS course [website](https://winter-2026.envs-193ds.com/assignments/midterm).
+The directions for this assignment can be found on the ENVS 193DS course [website](https://spring-2026.envs-193ds.com/assignments/midterm).
 
 ## Final Submission
 
