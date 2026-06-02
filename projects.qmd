@@ -6,10 +6,9 @@ format:
 listing:
   contents: "projects"
   type: grid
-  categories: true
+  categories: false
   sort: 
     - "date desc"
-toc: false
 ---
 
 
