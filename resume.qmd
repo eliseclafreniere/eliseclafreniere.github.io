@@ -2,8 +2,7 @@
 title: "Resume"
 format: html
 ---
-{{< pdf resume.pdf width=600 >}}
-
+{{< pdf resume.pdf width=1000 height=1000 >}}
 
 
 
