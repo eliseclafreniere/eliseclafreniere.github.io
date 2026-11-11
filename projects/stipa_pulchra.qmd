@@ -5,36 +5,51 @@ image: stipa.jpg
 format: html
 toc: false
 date: "2026-05-25"
+date-modified: "2026-11-11"
 ---
 
 ### *Stipa pulchra* Greenhouse Experiment 
 
-Spring quarter 2026 I interned with the Cheadle Center of Biodiversity and Ecological Restoration to help plan and begin a greenhouse experiment. The purpose of this experiment is to test *Stipa pulchra* survivorship in response to varying salinity levels. This experiment is being done to investigate a hypothesis looking at why *Stipa pulchra* has seen die off at the North Campus Open Space restoration site in recent years. The experimental design includes 4 salinity treatments and wet versus dry treatments for 80 individual plants. This experiment is currently ongoing. 
+Spring quarter 2026 I interned with the Cheadle Center for Biodiversity and Ecological Restoration to help plan and begin a greenhouse experiment. The purpose of this experiment was to test *Stipa pulchra* survivorship in response to varying salinity levels. This experiment was done to investigate a hypothesis looking at why *Stipa pulchra* had seen die off at the North Campus Open Space restoration site in recent years. The experimental design included four salinity treatments with wet versus dry treatments for 80 individual plants. 
+
+My work in this project mainly involved the experimental design, data collection, salinity treatment, and creating preliminary visualizations for the data collected. My work on the project ended after spring quarter 2026, but the project continued after this. The figure below is a preliminary data visualization I created for the project. The figure caption was written by me for this website, and the visualization was done in R. Additional preliminary visualizations along with the original Quarto Documents are in the [Elises_work](https://github.com/ccber-restoration/ncos-mesa/tree/main/data/stipa_salinity_experiment/Elise_work) folder on the project's GitHub repository. 
 
 ```{r}
-#| eval: false
+#| message: false
+#| warning: false
 #| code-fold: true
 #| code-summary: "View code"
 library(tidyverse)
 library(dplyr)
 library(janitor)
 library(here)
+# reading in files
 leaf_count <- read.csv(here("data", "Stipa_salinity_experiment_data - survival_leaves_2026_05_27.csv")) |>
+  
+# cleaning data 
+
+  # cleaning names 
   clean_names() |> 
+  # selecting for desired columns
   select(
     water, 
     live_leaves,
     green_leaves, 
     salinity) |> 
-  # Remove rows with missing values (NAs) to keep the graph clean
+  # remove rows with missing values (NAs) to keep the graph clean
   drop_na(live_leaves, green_leaves) |> 
-  # calculating proportion of live leaves 
+  # calculating proportion of live leaves using mutate
   mutate(
     proportion_live = live_leaves / (live_leaves + green_leaves),
     salinity = as.factor(salinity)
   )
 
+# creating preliminary visualization
+
+# base layer 
 ggplot(leaf_count,
+       # looking at salinity on the x axis, proprtion_live on y axis
+       # filling by treatment
        mapping = aes(x = salinity,
                      y = proportion_live,
                      fill = water)) +
@@ -43,12 +58,15 @@ ggplot(leaf_count,
                position = position_dodge(0.8)) +
   # second layer: geom_jitter
   geom_jitter(
-    aes(color = water), # Color points by watering treatment too
+    # coloring by treatment
+    aes(color = water),
+    # adjusting positioning and size
     position = position_jitterdodge(jitter.width = 0.2, dodge.width = 0.8),
     alpha = 0.7,
     size = 2,
     shape = 21
   ) +
+  # adding title, subtitle, naming axes 
   labs(
     title = "Proportion of Live Leaves by Salinity and Water Treatment",
     subtitle = "Data from 5/27/2026 and 5/28/2026",
@@ -56,9 +74,11 @@ ggplot(leaf_count,
     y = "Proportion of Live Leaves",
     fill = "Watering Treatment"
   ) +
+  # adding theme
   theme_minimal() +
+  # removing legend for readability
   theme(legend.position = "none") +
-  # Custom colors 
+  # adding custom colors for boxplot and jitter
   scale_fill_manual(
     values = c("wet" = "skyblue3", "dry" = "darkkhaki")
   ) +
