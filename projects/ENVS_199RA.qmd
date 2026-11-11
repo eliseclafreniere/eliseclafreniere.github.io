@@ -1,5 +1,143 @@
 ---
-title: "ENVS_199RA"
+title: "Research Assistant Work with Professor Bui"
+description: "Work done as a research assistant for UCSB Professor, An Bui"
+image: urchin.jpg
 format: html
+toc: false
+date: "2026-11-11"
 ---
 
+### Background
+
+In Fall 2026, I began work as a research assistant for UCSB Professor, [An Bui](https://es.ucsb.edu/people/bui), and am earning course credit for this work through ENVS 199RA. My work involves finding, cleaning, and creating visualizations for data sets from the [Santa Barbara Coastal LTER](https://sbclter.msi.ucsb.edu/data/catalog/) that demonstrate specific functions in R. These data sets and code will be used for Professor Bui's winter course, ENVS 193DD. I will also be creating an infographic from SBC LTER data sets that match my ecological interests to develop my data visualization skills. This work is currently ongoing, and this page will be updated as it progresses. 
+
+Below is an example of a class data set using the mutate function. This work explores a laboratory experiment on urchin foraging rates (DiForne et al.). The full code and write up, along with additional work that is currently in progress are in [the course GitHub repository](https://github.com/ENVS-193DD/199RA_Fall-2026/tree/main).
+
+### Urchin Foraging Rates on Kelp at Different Urchin Densities
+
+#### Set Up
+
+```{r}
+#| message: false
+#| warning: false
+#| code-fold: true
+#| code-summary: "View code"
+# loading in packages 
+library(tidyverse) # general use
+library(janitor) # cleaning data 
+library(here) # data organization 
+
+# reading in data 
+
+# urchin density data from DiFiore et al. 2021
+urchin <- read.csv(here("data","mesocosm_density_data copy.csv"))
+```
+
+#### Cleaning Data & Using Mutate Functions
+
+```{r}
+#| label: urchin-data-cleaning
+#| message: false
+#| warning: false
+#| code-fold: true
+#| code-summary: "View code"
+# create new object urchin_clean
+urchin_clean <- urchin |> 
+  # clean column names
+  clean_names() |>
+   # filter for trials with no mortality 
+  filter(mortality == 0) |> 
+  # mutate p_r to show the different species of urchins
+  rename(species = p_r) |> 
+  mutate(species = case_when(
+    species == "p" ~ "Purple urchin",
+    species == "r" ~ "Red urchin"
+    )) |> 
+  # grouping data for summarize
+  group_by(trial_id, tank, species, urchin_density, total_time, kelp_in, kelp_out) |> 
+  # using summarize to create urchin_biomass
+  summarize(urchin_biomass = sum(urchin_mass)/1.587) |> 
+  #ungrouping columns
+  ungroup() |> 
+  # mutate kelp_in and kelp_out columns to the kelp foraging rate of the urchins
+   mutate(kelp_consumption_rate = ((kelp_in - kelp_out) / total_time)*24) |>
+  mutate(rate_per_urchin = (kelp_consumption_rate) / urchin_density) |> 
+  # select for desired columns of interest 
+  select(urchin_density, rate_per_urchin, species, total_time, kelp_consumption_rate, urchin_biomass) 
+```
+
+#### Visualizations
+
+```{r}
+#| label: visualization-of-urchin-density-rate
+#| message: false
+#| warning: false
+#| code-fold: true
+#| code-summary: "View code"
+
+# base plot 
+ggplot(data = urchin_clean,
+  # x-axis urchin density, y-axis urchin consumption rate
+  # color by species 
+       mapping = aes(x = urchin_density,
+                     y = rate_per_urchin,
+                     color = species)) + 
+  # first layer: geom_point
+  geom_point(shape = 20,
+             alpha = 0.5,
+             size = 4) + 
+  # separating by species 
+  facet_wrap(~species) +
+  # customizing colors
+  scale_color_manual(values = c(
+    "Purple urchin" = "mediumorchid4",
+    "Red urchin" = "firebrick")) +
+  # labeling axes and adding title 
+  labs(x = "Urchin density (per tank)",
+       y = "Kelp consumed (gd^-1) per urchin",
+       title = "Per-urchin foragaing rate on kelp \nacross different urchin densities") + 
+  # adding custom theme 
+  theme_minimal() +
+  # removing legend
+  theme(legend.position = "none")
+```
+
+This visualization shows the kelp foraging rate (gd^-1^) per urchin across different urchin densities, separated by urchin species. The red urchin data had fewer observations and were only tested at lower urchin densities than the purple urchin data. Comparing the two panels, the red urchins appear to have higher foraging rates per urchin at lower densities. Overall, foraging rates per urchin were highly variable, particularly at low urchin densities. For red urchins, the foraging rate per urchin appeared to decrease as density increased, yet for the purple urchins, there was no clear trend. 
+
+```{r}
+#| label: visualization-of-kelp-consumption-rate
+#| message: false
+#| warning: false
+#| code-fold: true
+#| code-summary: "View code"
+
+# base plot 
+ggplot(data = urchin_clean,
+  # x-axis urchin density, y-axis urchin consumption rate
+  # color by species 
+       mapping = aes(x = urchin_biomass,
+                     y = kelp_consumption_rate,
+                     color = species)) + 
+  # first layer: geom_point
+  geom_point(shape = 20,
+             alpha = 0.5,
+             size = 4) + 
+    # separating by species 
+  facet_wrap(~species) +
+    # customizing colors
+  scale_color_manual(values = c(
+    "Purple urchin" = "mediumorchid4",
+    "Red urchin" = "firebrick")) +
+  labs(x = "Urchin biomass (gm^-2)",
+       y = "Kelp consumption rate (gd^-1)",
+       title = "Kelp consumption rate versus urchin biomass") + 
+  # adding custom theme 
+  theme_minimal() +
+  # removing legend
+  theme(legend.position = "none")
+```
+
+This visualization shows the kelp consumption rate (gd^-1^) across different urchin densities, separated by species. The red urchin data had fewer observations and were tested at lower urchin densities than the purple urchin data. In lower densities, kelp consumption rates appear to be similar across both species, though few red urchins had higher rates. Overall, kelp foraging rates appears to increase with increased urchin densities. 
+
+#### Data Citation 
+DiFiore, B, M. Rennick, J. Curtis, D. Reed, A. Stier. 2021. SBC LTER: Sea urchin foraging rates on giant kelp ver 1. Environmental Data Initiative. [https://doi.org/10.6073/pasta/6af4cc3b0e63b887baf1ae9201e1cd1d](https://doi.org/10.6073/pasta/6af4cc3b0e63b887baf1ae9201e1cd1d). Accessed 2026-10-16.
