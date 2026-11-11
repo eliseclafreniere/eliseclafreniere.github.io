@@ -2,7 +2,7 @@
 title: "Resume"
 format: html
 ---
-{{< pdf lafreniere_resume_updated.pdf width=1000 height=1000 >}}
+{{< pdf resume_lafreniere.pdf width=1000 height=1000 >}}
 
 
 
