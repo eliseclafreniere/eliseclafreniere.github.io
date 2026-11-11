@@ -19,11 +19,11 @@ about:
       href: mailto:eliselafreniere@ucsb.edu
 ---
 
-### Bio
+### About Me
 
-Hello! My name is Elise LaFreniere. I am an undergraduate student at the University of California, Santa Barbara (UCSB) studying Environmental Studies. 
+I am an undergraduate student at the University of California, Santa Barbara (UCSB) currently pursuing an Environmental Studies B.S. degree. I am particularly interested in how environmental data analysis and visualization can be used to better understand ecological systems and inform climate change solutions. My research experience with the Cheadle Center for Biodiversity and Ecological Restoration and undergraduate coursework has increased my interest in how data analysis is used for restoration and conservation work. I have also become increasingly interested in marine ecosystems and how they function and contribute to larger ecological stories. 
 
-My career interests focus on environmental consulting, climate change, conservation, and ecological interactions.
+Outside of academics, I love being outdoors and am often found hiking, surfing, or rock climbing. I also play guitar and am in a band I started with my friends called Publicity Stunt. 
 
 ### Education
 
@@ -31,6 +31,8 @@ My career interests focus on environmental consulting, climate change, conservat
 B.S. in Environmental Studies (In Progress)
 
 ### Experience
+
+**Research Assisant** | Research assiant for Professor An Bui October 2026 - present
 
 **Cheadle Center for Biodiversity and Ecological Restoration** | Research Intern January 2026 - June 2026
 
